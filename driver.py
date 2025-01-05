@@ -1,4 +1,6 @@
-from parking_lot import ParkingLotBuilder
+# client main code
+
+from parking_lot_builder import ParkingLotBuilder
 from parking_spot import ParkingSpot
 from vehicle_factory import VehicleFactory
 from vehicle_type import VehicleType
@@ -29,12 +31,12 @@ if __name__ == "__main__":
         .build()
     )
 
-    car1 = VehicleFactory().get_vehicle(VehicleType.CAR, "BH23A3JJ")
-    car2 = VehicleFactory().get_vehicle(VehicleType.CAR, "BH22A2JJ")
-    truck1 = VehicleFactory().get_vehicle(VehicleType.TRUCK, "BH23A3JI")
-    motorcycle1 = VehicleFactory().get_vehicle(VehicleType.MOTORCYCLE, "BH23A3JA")
-    motorcycle2 = VehicleFactory().get_vehicle(VehicleType.MOTORCYCLE, "BH23A3JB")
-    motorcycle3 = VehicleFactory().get_vehicle(VehicleType.MOTORCYCLE, "BH23A3JC")
+    car1 = VehicleFactory().create_vehicle(VehicleType.CAR, "BH23A3JJ")
+    car2 = VehicleFactory().create_vehicle(VehicleType.CAR, "BH22A2JJ")
+    truck1 = VehicleFactory().create_vehicle(VehicleType.TRUCK, "BH23A3JI")
+    motorcycle1 = VehicleFactory().create_vehicle(VehicleType.MOTORCYCLE, "BH23A3JA")
+    motorcycle2 = VehicleFactory().create_vehicle(VehicleType.MOTORCYCLE, "BH23A3JB")
+    motorcycle3 = VehicleFactory().create_vehicle(VehicleType.MOTORCYCLE, "BH23A3JC")
 
     print(parking_lot.park_vehicle(car1))
     print(parking_lot.park_vehicle(car2))

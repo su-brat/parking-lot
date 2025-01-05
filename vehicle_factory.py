@@ -1,3 +1,5 @@
+# Factory pattern
+
 from motorcycle import Motorcycle
 from car import Car
 from truck import Truck
@@ -11,7 +13,7 @@ class VehicleFactory:
         VehicleType.MOTORCYCLE: Motorcycle,
     }
 
-    def get_vehicle(self, vehicle_type, license_no):
+    def create_vehicle(self, vehicle_type, license_no):
         if vehicle_type in self.vehicle_instance:
             VehicleCls = self.vehicle_instance[vehicle_type]
             return VehicleCls(license_no)
